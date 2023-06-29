@@ -15,7 +15,13 @@ jobs:
           node-version: '14.x'
       - name: Build web-app
         run: |
-          npm ci
+         if [ -e yarn.lock ]; then
+            yarn install --frozen-lockfile
+            elif [ -e package-lock.json ]; then
+            npm ci
+            else
+            npm i
+             fi
           npm run build
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
