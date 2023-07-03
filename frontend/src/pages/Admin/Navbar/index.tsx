@@ -1,23 +1,24 @@
-import './style.css';
+import './style.css'
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className="admin-nav-container">
       <ul>
         <li>
-          <a href="link" className='admins-nav-item active'>
+          <NavLink to="/admin/products" className='admins-nav-item '>
             <p>Produtos</p>
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="link" className='admins-nav-item '>
+          <NavLink to="/admin/categories" className='admins-nav-item '>
             <p>Categoria</p>
-          </a>
+          </NavLink>
         </li>
         <li>
-          <a href="link" className='admins-nav-item'>
+          <NavLink to="/admin/users" className='admins-nav-item'>
             <p>Usuários</p>
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
