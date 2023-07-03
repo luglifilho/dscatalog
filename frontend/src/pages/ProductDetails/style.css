@@ -1,17 +1,17 @@
 .prodcutDetails-container {
     padding: 10px;
     font-size: 24px;
-    border: 1px solid red;
+    
 } 
 .productDetails-card {
     padding: 10px;
-    border: 1px solid red;
+    
 }
 .goback-container {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    border: 1px solid red;
+   
 
 }
 .goback-container svg {
@@ -28,7 +28,9 @@
 .img-container {
     margin-bottom: 20px;
     text-align: center;
-    border: 1px solid red;
+    border-radius: 20px;
+    border: 1px solid #e1e1e1;
+    padding: 20px;
 
 }
 .img-container img {
@@ -36,14 +38,16 @@
 }
 .name-price-container {
     margin-bottom: 20px;
-    border: 1px solid red;
+  
 }
 .name-price-container h1 {
     font-size: 1.1em;
     letter-spacing: -0.015rem;
 }
 .description-container {
-    border: 1px solid red;
+    border-radius: 20px;
+    border: 1px solid #e1e1e1;
+    padding: 20px;
 }
 .description-container h2 {
     color: #9E9E9E;
@@ -56,3 +60,33 @@
     letter-spacing: -0.015em;
     font-size: 0.7em;
 }
+
+@media (min-width: 576px) {
+    .prodcutDetails-container {
+        padding: 20px;
+        font-size: 32px;    
+    }    
+    .productDetails-card {
+        padding: 20px;            
+    }
+}
+@media (min-width: 992px) {
+    .prodcutDetails-container {
+        padding: 40px;
+    }    
+    .productDetails-card {
+        padding: 40px;
+    }
+    .img-container {
+        width: 80%;
+    }
+    .description-container {
+        padding: 40px;
+    }
+    .name-price-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
