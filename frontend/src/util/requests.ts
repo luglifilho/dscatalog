@@ -2,6 +2,7 @@
 import axios, { AxiosRequestConfig } from 'axios';
 import { config } from 'process';
 import qs from 'qs'
+import history from './history';
 
 type LoginResponse = {
 
@@ -77,8 +78,9 @@ axios.interceptors.response.use(function (response) {
     // Do something with response data
     return response;
   }, function (error) {
-    // Any status codes that falls outside the range of 2xx cause this function to trigger
-    // Do something with response error
+    if(error.response.status === 401 || error.response.status === 403) {
+        history.push('/admin/auth');
+    }
     return Promise.reject(error);
   });
 
