@@ -6,8 +6,8 @@ import Pagination from 'components/Pagination';
 import { useState, useEffect } from 'react';
 import { SpringPage } from 'types/vendor/spring';
 
-import { BASE_URL } from 'util/requests';
-import axios, { AxiosRequestConfig } from 'axios';
+import { BASE_URL, requestBackend } from 'util/requests';
+import  { AxiosRequestConfig } from 'axios';
 import './styles.css';
 
 const Catalog = () => {
@@ -17,14 +17,14 @@ const Catalog = () => {
     const params: AxiosRequestConfig = {
       method: 'GET',
       url: "/products",
-      baseURL: BASE_URL,
       params: {
         page: 0,
         size: 12,
       },
     };
-    axios(params).then((response) => {
-      setPage(response.data);
+    requestBackend(params)
+    .then((response) => {
+    setPage(response.data);
     });
   }, []);
 
