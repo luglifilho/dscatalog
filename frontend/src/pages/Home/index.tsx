@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom';
 
 import './styles.css';
 
-
 const Home = () => {
   return (
     <div className="home-container">
-
       <div className="base-card home-card">
         <div className="home-content-container">
           <div>
@@ -20,7 +18,7 @@ const Home = () => {
           </div>
           <div>
             <Link to="/products">
-              <ButtonIcon text =" Inicie agora a sua busca"/>
+              <ButtonIcon text="Inicie agora a sua busca" />
             </Link>
           </div>
         </div>

@@ -1,15 +1,13 @@
 import './styles.css';
 
-//import ProductImg from 'assets/images/product.png';
 import ProductPrice from 'components/ProductPrice';
-import { number } from 'yargs';
-import { Product } from '../../types/product';
+import { Product } from 'types/product';
 
-type Props = { 
+type Props = {
     product: Product;
 }
 
-const ProductCard = ({product}: Props) => {
+const ProductCard = ( { product } : Props) => {
 
     return (
         <div className="base-card product-card">
