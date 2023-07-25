@@ -64,7 +64,7 @@ const Navbar = () => {
                 CATÁLOGO
               </NavLink>
             </li>
-            <li className='adm-navbar'>
+            <li>
               <NavLink to="/admin" activeClassName="active">
                 ADMIN
               </NavLink>

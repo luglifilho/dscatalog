@@ -39,9 +39,6 @@
 .nav-username {
   display: none;
 }
-.adm-navbar {
-  display: none;
-}
 
 @media (min-width: 768px) {
   .nav-login-logout {
@@ -49,24 +46,15 @@
     color: #fff;
     margin-right: 15px;
   }
-  .adm-navbar {
-    display: unset;
-  }
 }
 
 @media (min-width: 992px) {
   .nav-login-logout {
     margin-right: 40px;
-    .adm-navbar {
-      display: unset;
-    }
   }
 
   .nav-username {
     display: unset;
     margin-right: 20px;
-  }
-  .adm-navbar {
-    display: unset;
   }
 }

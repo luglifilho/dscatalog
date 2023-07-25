@@ -9,7 +9,7 @@ import { getTokenData } from 'util/auth';
 
 import './styles.css';
 
-type FormData = {
+type CredentialsDTO = {
   username: string;
   password: string;
 };
@@ -28,11 +28,11 @@ const Login = () => {
 
   const [hasError, setHasError] = useState(false);
 
-  const { register, handleSubmit, formState: {errors} } = useForm<FormData>();
-
+  const { register, handleSubmit, formState: {errors} } = useForm<CredentialsDTO>();
+    
   const history = useHistory();
 
-  const onSubmit = (formData: FormData) => {
+  const onSubmit = (formData: CredentialsDTO) => {
     requestBackendLogin(formData)
       .then((response) => {
         saveAuthData(response.data);
@@ -67,7 +67,7 @@ const Login = () => {
             })}
             type="text"
             className={`form-control base-input ${errors.username ? 'is-invalid' : ''}`}
-            placeholder="Email"
+            placeholder="Email: 'maria@gmail.com' ou 'alex@gmail.com'"
             name="username"
           />
           <div className="invalid-feedback d-block">{errors.username?.message}</div>
@@ -79,7 +79,7 @@ const Login = () => {
             })}
             type="password"
             className={`form-control base-input ${errors.password ? 'is-invalid' : ''}`}
-            placeholder="Password"
+            placeholder="Senha: '123456'"
             name="password"
           />
           <div className="invalid-feedback d-block">{errors.password?.message}</div>
