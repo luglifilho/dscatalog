@@ -10,7 +10,7 @@ databases:
    plan: standard
    repo: https://github.com/luglifilho/dscatalog
    envVars:
-   - key: DATABASE_URL
+   - key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTIxOTY3MTksInVzZXJfbmFtZSI6Im1hcmlhQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfT1BFUkFUT1IiLCJST0xFX0FETUlOIl0sImp0aSI6IjdkNTg2MzVmLWEzODctNDcwYi04YTllLTI1OWJmMWIzNzkxOCIsImNsaWVudF9pZCI6ImRzY2F0YWxvZyIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdfQ.lOJo7w8Hp0zHJQQnmLhMPf53washIeNdyJW9zU8Zaas
      fromDatabase:
        name: Catalog
        property: connectionString
