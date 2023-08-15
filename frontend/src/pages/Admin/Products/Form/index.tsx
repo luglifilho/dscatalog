@@ -193,7 +193,6 @@ const Form = () => {
             </div>
           </div>
           <div className="product-crud-buttons-container">
-            
             <button
               className="btn btn-outline-danger product-crud-button"
               onClick={handleCancel}
